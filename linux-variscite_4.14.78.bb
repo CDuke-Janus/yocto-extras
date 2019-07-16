@@ -22,6 +22,9 @@ SRC_URI = "${KERNEL_SRC};branch=${SRCBRANCH}"
 #Added support for PR service
 PV = "1.0+git${SRCPV}"
 
+#Added autoboot for the nocturn and ov5642 camera
+KERNEL_MODULE_AUTOLOAD += "ovnocturn_xs_camera ov5642_camera"
+
 DEFAULT_PREFERENCE = "1"
 
 KERNEL_DEFCONFIG = "${S}/arch/arm/configs/imx_v7_var_defconfig"
